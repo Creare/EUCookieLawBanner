@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Creare_Eucookielaw>
+      <version>0.1.0</version>
+    </Creare_Eucookielaw>
+  </modules>
+  <frontend>
+    <layout>
+      <updates>
+        <eucookielaw>
+          <file>eucookielaw.xml</file>
+        </eucookielaw>
+      </updates>
+    </layout>
+  </frontend>
+  <default>
+    <eu_cookie_law>
+      <cookie_banner_settings>
+        <show_banner>1</show_banner>
+        <cookie_lifetime>14</cookie_lifetime>
+        <privacy_url>privacy-policy-cookie-restriction-mode</privacy_url>
+		<privacy_message>Our website uses cookies. By continuing we assume your permission to deploy cookies, as detailed in our Privacy Policy</privacy_message>
+		<privacy_url_text>Policy Details</privacy_url_text>
+      </cookie_banner_settings>
+    </eu_cookie_law>
+  </default>
+</config>

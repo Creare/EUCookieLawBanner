@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+<tabs>
+	<crearextend translate="label">
+		<label>Crearextend</label>
+		<sort_order>100</sort_order>
+	</crearextend>
+</tabs>
+  <sections>
+  	<eu_cookie_law translate="label">
+      <label>EU Cookie Law</label>
+      <tab>crearextend</tab>
+      <frontend_type>text</frontend_type>
+      <sort_order>1000</sort_order>
+      <show_in_default>1</show_in_default>
+      <show_in_website>1</show_in_website>
+      <show_in_store>1</show_in_store>
+	  <groups>
+			<cookie_banner_settings translate="label">
+				<label>Cookie Banner Settings</label>
+          		<sort_order>100</sort_order>
+          		<show_in_default>1</show_in_default>
+          		<show_in_website>1</show_in_website>
+          		<show_in_store>1</show_in_store>
+				<fields>
+					<show_banner translate="label">
+						<label>Show Cookie Banner?</label>
+						<frontend_type>select</frontend_type>
+             			<source_model>adminhtml/system_config_source_yesno</source_model>
+						<sort_order>1</sort_order>
+						<show_in_default>1</show_in_default>
+						<show_in_website>1</show_in_website>
+						<show_in_store>1</show_in_store>
+					</show_banner>	
+					<cookie_lifetime translate="label">
+						<label>Cookie Lifetime (Days)</label>
+						<frontend_type>text</frontend_type>
+						<sort_order>2</sort_order>
+						<show_in_default>1</show_in_default>
+						<show_in_website>1</show_in_website>
+						<show_in_store>1</show_in_store>
+						<validate>validate-zero-or-greater</validate>
+						<depends>
+                        	<show_banner>1</show_banner>
+                        </depends>
+					</cookie_lifetime>			
+					<privacy_url translate="label">
+						<label>Privacy Policy URL</label>
+						<frontend_type>text</frontend_type>
+						<sort_order>3</sort_order>
+						<show_in_default>1</show_in_default>
+						<show_in_website>1</show_in_website>
+						<show_in_store>1</show_in_store>
+						<comment>Relative to your Base Url http://www.domain.com/</comment>
+						<depends>
+                        	<show_banner>1</show_banner>
+                        </depends>
+					</privacy_url>
+					<privacy_url_text translate="label">
+						<label>Privacy Link Text</label>
+						<frontend_type>text</frontend_type>
+						<sort_order>4</sort_order>
+						<show_in_default>1</show_in_default>
+						<show_in_website>1</show_in_website>
+						<show_in_store>1</show_in_store>
+						<depends>
+                        	<show_banner>1</show_banner>
+                        </depends>
+					</privacy_url_text>
+					<privacy_message translate="label">
+						<label>Privacy Message</label>
+						<frontend_type>textarea</frontend_type>
+						<sort_order>5</sort_order>
+						<show_in_default>1</show_in_default>
+						<show_in_website>1</show_in_website>
+						<show_in_store>1</show_in_store>
+						<depends>
+                        	<show_banner>1</show_banner>
+                        </depends>
+					</privacy_message>
+				</fields>
+			</cookie_banner_settings>
+		</groups>
+    </eu_cookie_law>
+  </sections>
+</config>
