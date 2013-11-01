@@ -20,26 +20,34 @@
  *
  * @category    design
  * @package     base_default
- * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
 <?php if (Mage::getStoreConfig('eu_cookie_law/cookie_banner_settings/show_banner')) : ?>
 <script type="text/javascript">
-
+<?php if (Mage::getStoreConfig('eu_cookie_law/cookie_banner_settings/developer_mode')) : ?>
+var devMode = true;
+<?php else : ?>
+var devMode = false;
+<?php endif ?>
 var dropCookie = true;
 var cookieDuration = <?php echo Mage::getStoreConfig('eu_cookie_law/cookie_banner_settings/cookie_lifetime') ?>; 
 var cookieName = 'complianceCookie';
 var cookieValue = 'on';
+var css = '<?php echo preg_replace( "/\r|\n/", "", Mage::getStoreConfig('eu_cookie_law/cookie_banner_settings/css')) ?>';
 var privacyUrl = '<?php echo $this->getUrl(Mage::getStoreConfig('eu_cookie_law/cookie_banner_settings/privacy_url')) ?>';
 var privacyMessage = '<?php echo Mage::getStoreConfig('eu_cookie_law/cookie_banner_settings/privacy_message') ?>';
 var privacyLinkText = '<?php echo Mage::getStoreConfig('eu_cookie_law/cookie_banner_settings/privacy_url_text') ?>';
+var fadeOutTime = <?php echo Mage::getStoreConfig('eu_cookie_law/cookie_banner_settings/fadeout') ?>;
 
 window.onload = function(){
 	if(checkCookie(window.cookieName) != window.cookieValue){
 		createDiv(); 
-	}
+	} else 
+            {
+                if (devMode) 
+                        createDiv();
+            }
 }
-
 </script>
 <?php endif ?>

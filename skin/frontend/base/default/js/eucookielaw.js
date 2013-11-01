@@ -5,16 +5,37 @@ function createDiv(){
 	var div = document.createElement('div');
 	div.setAttribute('id','cookie-law');
 	div.innerHTML = '<p>'+privacyMessage+' <a href="'+privacyUrl+'" rel="nofollow" title="'+privacyLinkText+'">'+privacyLinkText+'</a>.</p>';	
-	
+	appendCSS();
+        
 	// bodytag.appendChild(div); // Adds the Cookie Law Banner just before the closing </body> tag
 	// or
 	bodytag.insertBefore(div,bodytag.firstChild); // Adds the Cookie Law Banner just after the opening <body>
 	
-	document.getElementsByTagName('body')[0].className+=' cookiebanner'; //Adds a class tothe <body> tag when the banner is visible
-	
 	createCookie(window.cookieName,window.cookieValue, window.cookieDuration); // Create the cookie
+        
+        if (getFadeOutTime())
+            {
+                setTimeout("fadeOut()",getFadeOutTime());
+            }
 }
 
+function appendCSS(){
+	var head = document.head;
+	var style = document.createElement('style');
+        style.type = 'text/css';
+        style.appendChild(document.createTextNode(css));
+        head.appendChild(style);
+}
+
+function fadeOut()
+{
+    new Effect.Fade('cookie-law', { duration:1});
+}
+
+function getFadeOutTime()
+{
+    return (fadeOutTime*1000);
+}
 
 function createCookie(name,value,days) {
 	if (days) {

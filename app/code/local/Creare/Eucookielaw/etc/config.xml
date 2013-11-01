@@ -2,7 +2,7 @@
 <config>
   <modules>
     <Creare_Eucookielaw>
-      <version>0.1.0</version>
+      <version>1.0.0</version>
     </Creare_Eucookielaw>
   </modules>
   <frontend>
@@ -20,8 +20,12 @@
         <show_banner>1</show_banner>
         <cookie_lifetime>14</cookie_lifetime>
         <privacy_url>privacy-policy-cookie-restriction-mode</privacy_url>
-		<privacy_message>Our website uses cookies. By continuing we assume your permission to deploy cookies, as detailed in our Privacy Policy</privacy_message>
-		<privacy_url_text>Policy Details</privacy_url_text>
+    <privacy_message>Our website uses cookies. By continuing we assume your permission to deploy cookies, as detailed in our Privacy Policy</privacy_message>
+    <privacy_url_text>Policy Details</privacy_url_text>
+                <developer_mode>0</developer_mode>
+                <css>#cookie-law { background:#f7f7f7; }
+#cookie-law p { padding:5px 0; margin:0; text-align: center }</css>
+                <fadeout>0</fadeout>
       </cookie_banner_settings>
     </eu_cookie_law>
   </default>
