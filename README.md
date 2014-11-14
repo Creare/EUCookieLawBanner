@@ -13,4 +13,4 @@
 <h2>Configuration</h2>
 <p>Go to <strong>System > Configuration > EU Cookie Law</strong> (under the Creare Group tab) to configure this module.</p>
 
-<p>Also available on Magento Connect: <a href="http://www.magentocommerce.com/magento-connect/creare-eu-cookie-law-banner-5568.html">Creare EU Cookie Law Banner</a></p>
+<p>Also available on Magento Connect: <a href="http://www.magentocommerce.com/magento-connect/creare-eu-cookie-law-banner.html">Creare EU Cookie Law Banner</a></p>
