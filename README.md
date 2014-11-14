@@ -1,4 +1,4 @@
-<h2>Magento EU Cookie Law Banner</h2>
+<h2>EU Cookie Law Banner for Magento</h2>
 
 <p>An extremely lightweight, prototype.js cookie law banner extension for Magento. Includes a host of configurable options such as:</p>
 <ul>
