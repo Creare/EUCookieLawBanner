@@ -1,4 +1,4 @@
-<h1>Magento EU Cookie Law Banner</h1>
+<h2>Magento EU Cookie Law Banner</h2>
 
 <p>An extremely lightweight, prototype.js cookie law banner extension for Magento. Includes a host of configurable options such as:</p>
 <ul>
@@ -10,7 +10,8 @@
 <li>CSS styles</li>
 </ul>
 
-<h2>Configuration</h2>
 <p>Go to <strong>System > Configuration > EU Cookie Law</strong> (under the Creare Group tab) to configure this module.</p>
 
+<h3>Developer Details</h3>
+<p>Module written by Adam Moss (<a href="https://twitter.com/adampmoss">@adampmoss</a>)</p>
 <p>Also available on Magento Connect: <a href="http://www.magentocommerce.com/magento-connect/creare-eu-cookie-law-banner.html">Creare EU Cookie Law Banner</a></p>
